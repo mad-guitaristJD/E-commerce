@@ -9,6 +9,7 @@ const cartRouter = require("./routes/cart.routes")
 const checkoutRouter = require("./routes/checkout.routes")
 const orderRouter = require("./routes/order.routes")
 const uploadRouter = require("./routes/upload.routes")
+const adminRouter = require("./routes/admin.routes")
 
 // Connect to Database
 connectDB()
@@ -30,6 +31,7 @@ app.use("/api/cart", cartRouter);
 app.use("/api/checkout", checkoutRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/upload", uploadRouter);
+app.use("/api/admin", adminRouter);
 
 app.listen(PORT, () => {
     console.log(`Server started to listen on port: ${PORT}`);
